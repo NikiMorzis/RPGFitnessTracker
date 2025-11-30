@@ -372,6 +372,24 @@ function loadFile(event) {
     reader.readAsText(file);
 }
 
+// Открытие модального окна "О программе"
+function showAbout() {
+    document.getElementById('aboutModal').style.display = 'flex';
+}
+
+// Закрытие модального окна
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
 // Загружаем данные при старте
 loadProgress();
 updateUI();
+
+// Закрытие модальных окон по клику вне контента
+window.onclick = function(event) {
+    const aboutModal = document.getElementById('aboutModal');
+    if (event.target === aboutModal) {
+        closeModal('aboutModal');
+    }
+}
