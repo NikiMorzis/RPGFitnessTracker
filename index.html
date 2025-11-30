@@ -10,7 +10,10 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">RPG FITNESS TRACKER</div>
+            <div class="header-content">
+                <div class="logo">RPG FITNESS TRACKER</div>
+                <button class="about-btn" onclick="showAbout()">О программе</button>
+            </div>
             <p class="subtitle">Прокачай себя в реальной жизни!</p>
         </header>
 
@@ -163,6 +166,28 @@
 
     <div class="notification" id="notification">
         <i class="fas fa-check-circle"></i> <span id="notificationText">Упражнение выполнено!</span>
+    </div>
+
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('aboutModal')">&times;</span>
+            <h2 class="modal-title">О программе</h2>
+            <div class="about-content">
+                <p><strong>Версия:</strong> 1.1</p>
+                <p><strong>Разработчик:</strong> Разживин Никита Сергеевич</p>
+                <p><strong>Назначение:</strong> RPG Fitness Tracker - это приложение для отслеживания физической активности с элементами ролевой игры. Прокачивайте свои физические характеристики в реальной жизни!</p>
+                <p><strong>Особенности:</strong></p>
+                <ul>
+                    <li>Система уровней и опыта</li>
+                    <li>4 характеристики: Сила, Ловкость, Интеллект, Выносливость</li>
+                    <li>Ежедневные задания</li>
+                    <li>Сохранение и загрузка прогресса</li>
+                    <li>Адаптивный дизайн</li>
+                </ul>
+                <p><strong>Философия:</strong> Программа помогает превратить физические упражнения в увлекательное приключение. Каждое выполнение упражнения приносит опыт, который повышает ваш уровень и характеристики. Цель - сделать занятия спортом более мотивирующими и интересными.</p>
+                <p><strong>Благодарности:</strong> Спасибо за использование RPG Fitness Tracker. Надеемся, что приложение поможет вам стать сильнее, быстрее и умнее!</p>
+            </div>
+        </div>
     </div>
 
     <input type="file" id="fileInput" accept=".json" style="display: none;" onchange="loadFile(event)">
